@@ -171,6 +171,8 @@ server.get('/auth/isAuthenticated', (req, res) => {
   }
 });
 
-server.listen(9000, () => {
-  console.log('Auth Server is Running on Port 9000...');
+const port = 9000 || process.env.port
+
+server.listen(port, () => {
+  console.log(`Auth Server is Running on Port ${port}...`);
 })
